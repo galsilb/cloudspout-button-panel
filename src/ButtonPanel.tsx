@@ -75,6 +75,22 @@ export class ButtonPanel extends PureComponent<Props, ButtonPanelState> {
     }
   }
 
+  getCookie(name: string) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+      const cookies = document.cookie.split(';');
+      for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i].trim();
+        // Does this cookie string begin with the name we want?
+        if (cookie.substring(0, name.length + 1) === name + '=') {
+          cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+          break;
+        }
+      }
+    }
+    return cookieValue;
+  }
+
   variant(): ButtonVariant | undefined {
     if (this.props.options.variant === 'custom') {
       return undefined;
@@ -130,6 +146,11 @@ export class ButtonPanel extends PureComponent<Props, ButtonPanelState> {
       } else {
         console.error('Unknown params type', options.type);
       }
+    }
+
+    const csrftoken = this.getCookie('csrftoken');
+    if (csrftoken) {
+      requestHeaders.set('X-CSRFToken', csrftoken);
     }
 
     return fetchOpts;

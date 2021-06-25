@@ -16,7 +16,7 @@
     "release": "release-it",
     "sign": "npx @grafana/toolkit plugin:sign && git add dist/MANIFEST.txt && git commit -m Sign"
   },
-  "repository": "github:cloudspout/cloudspout-button-panel",
+  "repository": "github:galsilb/cloudspout-button-panel",
   "author": "CloudSpout LLC",
   "license": "MIT",
   "bugs": {
@@ -29,8 +29,8 @@
     "@grafana/toolkit": "7.4.2",
     "@grafana/ui": "7.4.2",
     "@monaco-editor/react": "^3.7.0",
-    "release-it": "^14.4.1",
-    "copy-webpack-plugin": "^6.3.2"
+    "copy-webpack-plugin": "^6.3.2",
+    "release-it": "^14.4.1"
   },
   "engines": {
     "node": ">=12 <13"
