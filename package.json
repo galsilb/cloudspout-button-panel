@@ -1,5 +1,5 @@
 {
-  "name": "cloudspout-button-panel",
+  "name": "galsilb-button-panel",
   "version": "7.0.25",
   "description": "Panel for a single button",
   "scripts": {
@@ -39,7 +39,7 @@
     "github": {
       "release": true,
       "assets": [
-        "cloudspout-button-panel.zip"
+        "galsilb-button-panel.zip"
       ]
     },
     "npm": {
