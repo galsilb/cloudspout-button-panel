@@ -1,7 +1,7 @@
 {
   "type": "panel",
   "name": "Button Panel",
-  "id": "galsilb-button-panel",
+  "id": "cloudspout-button-panel",
   "info": {
     "description": "Panel for a single button",
     "author": {
